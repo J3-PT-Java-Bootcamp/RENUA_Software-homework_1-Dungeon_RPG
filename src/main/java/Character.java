@@ -2,13 +2,16 @@ abstract class Character implements Attacker {
     private int id;
     private String name;
     protected int hp;
+
+    protected int initialHp;
     private boolean isAlive;
 
     public Character(int id, String name, int HP, boolean isAlive) {
-        this.id = id;
-        this.name = name;
-        this.hp = HP;
-        this.isAlive = isAlive;
+        setId(id);
+        setName(name);
+        setHp(HP);
+        setInitialHp(HP);
+        setAlive(isAlive);
     }
 
     public int getId() {
@@ -43,9 +46,17 @@ abstract class Character implements Attacker {
         isAlive = alive;
     }
 
+    public int getInitialHp() {
+        return initialHp;
+    }
+
+    public void setInitialHp(int initialHp) {
+        this.initialHp = initialHp;
+    }
+
+
     public void doDamage(int damage) {
         // Must check if it is dead
-
         this.setHp(this.getHp() - damage);
     }
 
