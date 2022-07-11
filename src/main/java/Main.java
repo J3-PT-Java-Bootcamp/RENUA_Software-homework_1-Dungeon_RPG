@@ -78,14 +78,13 @@ public class Main {
     public static void battler (Warrior warrior, Wizard wizard){
         System.out.println("3.............2...........1........FIGHT!!!");
         int counter = 0;
-        while((warrior.getStamina() >= 1 || wizard.getMana() >= 1) )  {
-            if (wizard.getHp()<= 0) wizard.setAlive(false);
-            if (warrior.getHp()<= 0) warrior.setAlive(false);
-            if (!wizard.isAlive() || !warrior.isAlive())break;
+        while((warrior.getStamina() >= 1 || wizard.getMana() >= 1) && (wizard.isAlive() && warrior.isAlive()) )  {
+
             warrior.attack(wizard);
             wizard.attack(warrior);
             counter++;
-
+            if (wizard.getHp()<= 0) wizard.setAlive(false);
+            if (warrior.getHp()<= 0) warrior.setAlive(false);
 
             /*System.out.println("warrior 1: " + warrior);
             System.out.println("wizard  1: " + wizard);
