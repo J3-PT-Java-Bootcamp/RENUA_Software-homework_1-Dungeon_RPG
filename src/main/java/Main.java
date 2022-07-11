@@ -92,15 +92,17 @@ public class Main {
             */
 
         }
-        System.out.println("Number of rounds fought: "+ counter);
-        statsCreator(warrior, wizard);
+
+        statsCreator(warrior, wizard, counter);
     }
 
-    public static void statsCreator (Warrior warrior, Wizard wizard){
+    public static void statsCreator (Warrior warrior, Wizard wizard, int counter){
         int damageWarrior = warrior.getInitialHp() - warrior.getHp();
         int damageWizard = wizard.getInitialHp() - wizard.getHp();
         System.out.println("------------------------------");
         System.out.println("STATS OF THE BATTLE");
+        System.out.println("Number of rounds fought: "+ counter);
+        System.out.println();
         System.out.println(warrior.getName() + "(warrior):");
         System.out.println("Stamina left: " + warrior.getStamina());
         System.out.println("HP left: " + warrior.getHp() + " (Damage taken: " + damageWarrior + ")");
@@ -110,11 +112,11 @@ public class Main {
         System.out.println("Mana left: " + wizard.getMana());
         System.out.println("HP left: " + wizard.getHp() + " (Damage taken: " + damageWizard + ")");
         System.out.println("Damage inflicted : " + damageWarrior );
-        System.out.println("------------------------------");
+        System.out.println();
         if (!warrior.isAlive()) System.out.println(wizard.getName()+ " has killed " + warrior.getName());
         else if (!wizard.isAlive()) System.out.println(warrior.getName()+ " has killed " + wizard.getName());
         else System.out.println("It has been a ferocious battle");
-
+        System.out.println("------------------------------");
 
     }
 }

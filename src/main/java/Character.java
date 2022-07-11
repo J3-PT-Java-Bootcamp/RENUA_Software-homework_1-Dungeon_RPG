@@ -58,6 +58,7 @@ abstract class Character implements Attacker {
     public void doDamage(int damage) {
         // Must check if it is dead
         this.setHp(this.getHp() - damage);
+        if (this.getHp() < 0) this.setHp(0);
     }
 
     public String toString() {
