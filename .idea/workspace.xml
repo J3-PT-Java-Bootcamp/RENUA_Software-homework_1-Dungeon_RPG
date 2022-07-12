@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_6_2022_20_22__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_6_2022_20_22__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="finiquitao">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Character.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Wizard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Warrior.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Warrior.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +88,8 @@
       <workItem from="1657290292733" duration="176000" />
       <workItem from="1657484237875" duration="738000" />
       <workItem from="1657555945232" duration="12454000" />
+      <workItem from="1657579937612" duration="990000" />
+      <workItem from="1657640563078" duration="6992000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml">
       <created>1656444649873</created>
@@ -149,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657570321927</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Creado:&#10;-Método statsCreator -&gt; Método que resume todas las rondas de un combate y imprime los stats de los dos combatientes (me falta implementar el contador de StrongAttacks y WeakAttacks).&#10;-Metodo battler -&gt; la simulación de rondas de combate la he metido en un método y le he modificado las condiciones de ejecución para que se asegure que los dos combatientes siguen vivos y al menos a uno de los dos le queda estamina (o mana). También he modificado la información que se printea para que solo aparezca el resumen de la batalla y no la información de cada ronda (se tiene que valorar por el grupo).&#10;Modificaciones:&#10;-Character -&gt; He añadido una variable (con sus getters y setters) llamada intialHp para poder usar de referencia a la hora de calcular el daño recibido para los stats. También le he añadido una condición al método doDamage para evitar que la vida de un personaje pueda ser negativa. (Si recibe más daño de la vida que tiene, esta se le queda a 0).&#10;-Warrior -&gt; he modificado un poco los métodos de heavy y weak attack para estandarizar el uso del método doDamage que hay en la clase padre Character. También le he modificado el toString para que en vez de poner warrior ponga el nombre del personaje ( entre paréntesis lleva el identifcador de la clase que es). Le he inicializado la variable de initialHp en el constructor.&#10;-Wizard -&gt; Le he hecho la misma modificación que a warrior en el método toString y le he inicializado la variable initialHp.">
+      <created>1657580898654</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1657580898654</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +180,9 @@
     <MESSAGE value="Edit ignore" />
     <MESSAGE value="Wizard can attack" />
     <MESSAGE value="Stats created + some random changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stats created + some random changes" />
+    <MESSAGE value="Creado:&#10;-Método statsCreator -&gt; Método que resume todas las rondas de un combate y imprime los stats de los dos combatientes (me falta implementar el contador de StrongAttacks y WeakAttacks).&#10;-Metodo battler -&gt; la simulación de rondas de combate la he metido en un método y le he modificado las condiciones de ejecución para que se asegure que los dos combatientes siguen vivos y al menos a uno de los dos le queda estamina (o mana). También he modificado la información que se printea para que solo aparezca el resumen de la batalla y no la información de cada ronda (se tiene que valorar por el grupo).&#10;Modificaciones:&#10;-Character -&gt; He añadido una variable (con sus getters y setters) llamada intialHp para poder usar de referencia a la hora de calcular el daño recibido para los stats. También le he añadido una condición al método doDamage para evitar que la vida de un personaje pueda ser negativa. (Si recibe más daño de la vida que tiene, esta se le queda a 0).&#10;-Warrior -&gt; he modificado un poco los métodos de heavy y weak attack para estandarizar el uso del método doDamage que hay en la clase padre Character. También le he modificado el toString para que en vez de poner warrior ponga el nombre del personaje ( entre paréntesis lleva el identifcador de la clase que es). Le he inicializado la variable de initialHp en el constructor.&#10;-Wizard -&gt; Le he hecho la misma modificación que a warrior en el método toString y le he inicializado la variable initialHp." />
+    <MESSAGE value="finiquitao" />
+    <option name="LAST_COMMIT_MESSAGE" value="finiquitao" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

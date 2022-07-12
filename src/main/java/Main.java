@@ -78,18 +78,18 @@ public class Main {
     public static void battler (Warrior warrior, Wizard wizard){
         System.out.println("3.............2...........1........FIGHT!!!");
         int counter = 0;
-        while((warrior.getStamina() >= 1 || wizard.getMana() >= 1) && (wizard.isAlive() && warrior.isAlive()) )  {
+        while( wizard.isAlive() && warrior.isAlive() )  {
 
             warrior.attack(wizard);
             wizard.attack(warrior);
             counter++;
-            if (wizard.getHp()<= 0) wizard.setAlive(false);
-            if (warrior.getHp()<= 0) warrior.setAlive(false);
+            if (wizard.getHp() == 0) wizard.setAlive(false);
+            if (warrior.getHp() == 0) warrior.setAlive(false);
 
             /*System.out.println("warrior 1: " + warrior);
             System.out.println("wizard  1: " + wizard);
             System.out.println();
-            */
+*/
 
         }
 
@@ -106,16 +106,16 @@ public class Main {
         System.out.println(warrior.getName() + "(warrior):");
         System.out.println("Stamina left: " + warrior.getStamina());
         System.out.println("HP left: " + warrior.getHp() + " (Damage taken: " + damageWarrior + ")");
-        System.out.println("Damage inflicted : " + damageWizard );
+        System.out.println("Damage inflicted : " + damageWizard + " (Heavy Attacks performed: " + warrior.getHeavyAttackCounter() + "  Weak Attacks performed: " + warrior.getWeakAttackCounter() + ")");
         System.out.println();
         System.out.println(wizard.getName() + "(wizard):");
         System.out.println("Mana left: " + wizard.getMana());
         System.out.println("HP left: " + wizard.getHp() + " (Damage taken: " + damageWizard + ")");
-        System.out.println("Damage inflicted : " + damageWarrior );
+        System.out.println("Damage inflicted : " + damageWarrior + " (Fireballs casted: " + wizard.getFireballCounter() + " Staff Hits performed: " + wizard.getStaffHitCounter()+ ")");
         System.out.println();
         if (!warrior.isAlive()) System.out.println(wizard.getName()+ " has killed " + warrior.getName());
         else if (!wizard.isAlive()) System.out.println(warrior.getName()+ " has killed " + wizard.getName());
-        else System.out.println("It has been a ferocious battle");
+        //else System.out.println("It has been a ferocious battle");
         System.out.println("------------------------------");
 
     }

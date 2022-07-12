@@ -11,11 +11,19 @@ public class Warrior extends Character {
     int stamina;
     int strength;
 
+
+
+    int heavyAttackCounter;
+    int weakAttackCounter;
+
     public Warrior(int id, String name, boolean isAlive) {
         super(id, name, new Random().nextInt(MIN_HP_WARRIOR, MAX_HP_WARRIOR), isAlive);
         setInitialHp(getHp());
         setStamina(new Random().nextInt(MIN_STAMINA, MAX_STAMINA));
         setStrength(new Random().nextInt(MIN_STRENGTH, MAX_STRENGTH));
+        setHeavyAttackCounter(0);
+        setWeakAttackCounter(0);
+
     }
 
     public Warrior(int id, String name, int HP, boolean isAlive) {
@@ -38,7 +46,21 @@ public class Warrior extends Character {
         this.strength = strength;
     }
 
-   
+    public int getHeavyAttackCounter() {
+        return heavyAttackCounter;
+    }
+
+    public void setHeavyAttackCounter(int heavyAttackCounter) {
+        this.heavyAttackCounter = heavyAttackCounter;
+    }
+
+    public int getWeakAttackCounter() {
+        return weakAttackCounter;
+    }
+
+    public void setWeakAttackCounter(int weakAttackCounter) {
+        this.weakAttackCounter = weakAttackCounter;
+    }
     public String toString() {
         return  getName() + "{" +
                 "stamina=" + stamina +
@@ -51,8 +73,10 @@ public class Warrior extends Character {
     public void attack(Character character) {
         if (stamina >= 5) {
             strongAttack(character);
-        } else {
+            setHeavyAttackCounter(getHeavyAttackCounter()+1);
+        } else  {
             weakAttack(character);
+            setWeakAttackCounter(getWeakAttackCounter()+1);
         }
     }
 

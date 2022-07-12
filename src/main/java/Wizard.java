@@ -11,6 +11,8 @@ public class Wizard extends Character{
     final static int MAX_MANA = 50;
     final static int MIN_INTELLIGENCE = 1;
     final static int MAX_INTELLIGENCE = 50;
+    int fireballCounter;
+    int staffHitCounter;
 
     private int mana;
     private int intelligence;
@@ -19,6 +21,8 @@ public class Wizard extends Character{
         setInitialHp(getHp());
         setMana(new Random().nextInt(MIN_MANA, MAX_MANA));
         setIntelligence(new Random().nextInt(MIN_INTELLIGENCE, MAX_INTELLIGENCE));
+        setFireballCounter(0);
+        setStaffHitCounter(0);
     }
 
     public int getMana() {
@@ -40,6 +44,22 @@ public class Wizard extends Character{
         this.intelligence = intelligence;
     }
 
+    public int getFireballCounter() {
+        return fireballCounter;
+    }
+
+    public void setFireballCounter(int fireballCounter) {
+        this.fireballCounter = fireballCounter;
+    }
+
+    public int getStaffHitCounter() {
+        return staffHitCounter;
+    }
+
+    public void setStaffHitCounter(int staffHitCounter) {
+        this.staffHitCounter = staffHitCounter;
+    }
+
     @Override
     public void attack(Character target) {
         // TODO: give the user the ability to choose
@@ -53,8 +73,14 @@ public class Wizard extends Character{
         if(chosenAttack == Attacks.StaffHit) staffHit(target);
         else fireball(target);*/
 
-        if(this.getMana() >= 5) fireball(target);
-        else staffHit(target);
+        if(this.getMana() >= 5){
+            fireball(target);
+            setFireballCounter(getFireballCounter()+1);
+        }
+        else  {
+            staffHit(target);
+            setStaffHitCounter(getStaffHitCounter()+1);
+        }
     }
 
     public void fireball(Character target) {
