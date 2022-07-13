@@ -52,8 +52,14 @@ public class Wizard extends Character{
         if(chosenAttack == Attacks.StaffHit) staffHit(target);
         else fireball(target);*/
 
-        if(this.getMana() >= 5) fireball(target);
-        else staffHit(target);
+        if(this.getMana() >= 5) {
+            System.out.print("Metodo a ejecutar: fireball()");
+            fireball(target);
+        }
+        else {
+            System.out.print("Metodo a ejecutar: staffHit()");
+            staffHit(target);
+        }
     }
 
     public void fireball(Character target) {

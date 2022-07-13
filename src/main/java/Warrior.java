@@ -36,7 +36,6 @@ public class Warrior extends Character {
     public void setStrength(int strength) {
         this.strength = strength;
     }
-
    
     public String toString() {
         return "Warrior{" +
@@ -49,8 +48,10 @@ public class Warrior extends Character {
     @Override
     public void attack(Character character) {
         if (stamina >= 5) {
+            System.out.print("   Metodo a ejecutar: heavyAttack()");
             strongAttack(character);
         } else {
+            System.out.print("   Metodo a ejecutar: weakAttack()");
             weakAttack(character);
         }
     }
