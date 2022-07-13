@@ -4,13 +4,13 @@ import java.util.Random;
 
 public class Main {
 
-    static int numWarriorsAndWizards = new Random().nextInt(1,5);
     static int counter = 1;
     static List<Warrior> warriorsParty = new ArrayList<>();
     static List<Wizard> wizardsParty = new ArrayList<>();
 
-
     public static void main(String[] args) {
+
+        int randomNumWarriorsAndWizards = new Random().nextInt(4,8);
 
         //Requirement 1
         /*var mainMenu = new Menu<Runnable>(new MenuOption[] {
@@ -27,55 +27,54 @@ public class Main {
         selected.run();*/
 
         //Requirement 2
+        System.out.println("numWarriorsAndWizards: " + randomNumWarriorsAndWizards);
+        createWarriorsAndWizards(randomNumWarriorsAndWizards);
+        System.out.println("warriorsParty.size(): " + warriorsParty.size());
 
-        //System.out.println("numWarriorsAndWizards: " + numWarriorsAndWizards);
-        //createWarriorsAndWizards();
+        while(warriorsParty.size() > 0  ||  wizardsParty.size() > 0) {
 
-       var warrior1 = new Warrior(
-                1,
-                "Warrior1",
-                true
-        );
+            int randomPosOfWarriorsParty = new Random().nextInt(0, warriorsParty.size());
+            int randomPosOfWizardsParty = new Random().nextInt(0, wizardsParty.size());
 
-        var wizard1 = new Wizard(
-                1,
-                "Wizard1",
-                true
-        );
+            Warrior warrior = warriorsParty.get(randomPosOfWarriorsParty);
+            Wizard wizard = wizardsParty.get(randomPosOfWizardsParty);
 
-        System.out.println("                   warrior : " + warrior1);
-        System.out.println("                   wizard  : " + wizard1);
-        System.out.println();
+            newRoundOfBattle(warrior, wizard);
 
-        while(warrior1.isAlive() && wizard1.isAlive()) {
-            wizard1.attack(warrior1);
-            warrior1.attack(wizard1);
+            int currentNumWarriors = warriorsParty.size();
+            int currentNumWizards = wizardsParty.size();
+
             System.out.println();
-            System.out.println("counter: " + counter++);
-            System.out.println("warrior 1: " + warrior1);
-            System.out.println("wizard  1: " + wizard1);
+            System.out.println("currentNumWarriors: " + currentNumWarriors);
+            System.out.println("currentNumWizards: " + currentNumWizards);
             System.out.println();
-            if (warrior1.getHp() <= 0) {
-                warrior1.setAlive(false);
-                warrior1.setHp(0);
-                warriorsParty.remove(warrior1);
-                break;
-            }
-            if (wizard1.getHp() <= 0) {
-                wizard1.setAlive(false);
-                wizard1.setHp(0);
-                warriorsParty.remove(wizard1);
-                break;
-            }
+
+            if (warriorsParty.size() == 0  || wizardsParty.size() == 0) break;
         }
 
-        System.out.println();
-        System.out.println("------------------------------------------------");
-        System.out.println("warrior 1: " + warrior1);
-        System.out.println("wizard  1: " + wizard1);
+        System.out.println("\n\n" + "--------------------------------------------------------------");
+
+        if (warriorsParty.size() == 0) System.out.println("WINNER TEAM: Wizards!!!" + "\n");
+        else System.out.println("WINNER TEAM: Warriors!!!" + "\n");
+
+        System.out.println("Initial number of Warriors: " + randomNumWarriorsAndWizards);
+        System.out.println("Initial number of Wizards: " + randomNumWarriorsAndWizards);
+        System.out.println("Total number of Warriors & Wizards: " + randomNumWarriorsAndWizards*2 + "\n");
+
+        System.out.println(
+                "Warriors: " + "\n" +
+                        "Alive warriors: " + warriorsParty.size() + "\n" +
+                        "Array of warriors: " + warriorsParty + "\n"
+        );
+
+        System.out.println(
+                "Wizards: " + "\n" +
+                        "Alive wizards: " + wizardsParty.size() + "\n" +
+                        "Array of wizards: " + wizardsParty + "\n"
+        );
     }
 
-    public static void createWarriorsAndWizards() {
+    public static void createWarriorsAndWizards(int numWarriorsAndWizards) {
         for(int i = 0; i < numWarriorsAndWizards; i++) {
             var warrior = new Warrior(
                     (i + 1),
@@ -89,13 +88,30 @@ public class Main {
             );
             warriorsParty.add(warrior);
             wizardsParty.add(wizard);
-            /*System.out.println(warrior);
-            System.out.println(wizard);
-            System.out.println();*/
         }
     }
 
     public static void newRoundOfBattle(Warrior warrior, Wizard wizard) {
-
+        while(warrior.isAlive() && wizard.isAlive()) {
+            wizard.attack(warrior);
+            warrior.attack(wizard);
+            System.out.println();
+            System.out.println("counter: " + counter++);
+            System.out.println("warrior 1: " + warrior);
+            System.out.println("wizard  1: " + wizard);
+            System.out.println();
+            if (warrior.getHp() <= 0) {
+                warrior.setAlive(false);
+                warrior.setHp(0);
+                warriorsParty.remove(warrior);
+                break;
+            }
+            if (wizard.getHp() <= 0) {
+                wizard.setAlive(false);
+                wizard.setHp(0);
+                wizardsParty.remove(wizard);
+                break;
+            }
+        }
     }
 }

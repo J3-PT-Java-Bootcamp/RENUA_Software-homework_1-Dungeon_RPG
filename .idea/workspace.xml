@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="Menu creation in process">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2_7_2022_16_29_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2_7_2022_16_29__Changes_.xml" beforeDir="false" />
+    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="Batalla de warrior y wizard hasta que uno de los dos muere">
+      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/EqualNumbersException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/MyHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Wizard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Warrior.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Warrior.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Wizard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Wizard.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +83,7 @@
       <updated>1656440934368</updated>
       <workItem from="1657037641513" duration="87000" />
       <workItem from="1657218889819" duration="335000" />
-      <workItem from="1657653293936" duration="21846000" />
+      <workItem from="1657653293936" duration="35452000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml">
       <created>1656444649873</created>
@@ -143,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657293657371</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Batalla de warrior y wizard hasta que uno de los dos muere">
+      <created>1657699824674</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1657699824674</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +174,8 @@
     <MESSAGE value="Edit ignore" />
     <MESSAGE value="Wizard can attack" />
     <MESSAGE value="Menu creation in process" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menu creation in process" />
+    <MESSAGE value="Batalla de warrior y wizard hasta que uno de los dos muere" />
+    <option name="LAST_COMMIT_MESSAGE" value="Batalla de warrior y wizard hasta que uno de los dos muere" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
