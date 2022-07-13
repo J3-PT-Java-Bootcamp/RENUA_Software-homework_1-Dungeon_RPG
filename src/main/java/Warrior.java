@@ -62,7 +62,8 @@ public class Warrior extends Character {
         this.weakAttackCounter = weakAttackCounter;
     }
     public String toString() {
-        return  getName() + "{" +
+        return  getName()+ " (warrior " + getId() + ")"
+                + "{" +
                 "stamina=" + stamina +
                 ", strength=" + strength +
                 ", hp=" + hp +
@@ -89,5 +90,10 @@ public class Warrior extends Character {
     private void weakAttack(Character taget) {
         taget.doDamage (this.getStrength() / 2);
         setStamina(getStamina() + 1);
+    }
+    public void restartCounters (){
+        setInitialHp(getHp());
+        setHeavyAttackCounter(0);
+        setWeakAttackCounter(0);
     }
 }

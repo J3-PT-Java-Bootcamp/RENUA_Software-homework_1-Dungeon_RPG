@@ -96,10 +96,16 @@ public class Wizard extends Character{
     }
 
     public String toString() {
-        return  getName() + "{" +
+        return  getName()+ " (wizard " + getId() + ")"
+                + "{" +
                 "mana=" + mana +
                 ", intelligence=" + intelligence +
                 ", hp=" + hp +
                 '}';
+    }
+    public void restartCounters (){
+        setInitialHp(getHp());
+        setStaffHitCounter(0);
+        setFireballCounter(0);
     }
 }
