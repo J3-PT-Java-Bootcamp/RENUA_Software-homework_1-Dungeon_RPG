@@ -12,9 +12,9 @@ public class Party {
     private final ArrayList<Character> characters;
     private final String name;
 
-    public Party(int partySize) {
+    public Party(int partySize, String name) {
 
-        this.name = new Faker().lordOfTheRings().location();
+        this.name = name;
 
         System.out.println("Created the " + this.name + " team!");
 

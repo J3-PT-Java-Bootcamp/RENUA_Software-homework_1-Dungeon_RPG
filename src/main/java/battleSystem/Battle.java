@@ -1,5 +1,6 @@
 package battleSystem;
 
+import com.github.javafaker.Faker;
 import entities.Character;
 
 /*
@@ -12,8 +13,8 @@ public class Battle {
     public Battle(int partySize) {
 
         // Generate parties
-        blueTeam = new Party(partySize);
-        redTeam = new Party(partySize);
+        blueTeam = new Party(partySize, new Faker().lordOfTheRings().location());
+        redTeam = new Party(partySize, new Faker().harryPotter().location());
     }
 
     public void begin() {
