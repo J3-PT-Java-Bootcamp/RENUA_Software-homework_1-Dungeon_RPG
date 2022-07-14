@@ -10,8 +10,13 @@ import entities.Wizard;
 
 public class Party {
     private final ArrayList<Character> characters;
+    private final String name;
 
-    public Party(int partySize) {
+    public Party(int partySize, String name) {
+
+        this.name = name;
+
+        System.out.println("Created the " + this.name + " team!");
 
         // TODO: replace ids with UUIDs
 
@@ -20,12 +25,16 @@ public class Party {
         for(int i = 0; i < partySize; i++) {
             if(new Random().nextInt(0,1) == 0) {
                 // Generate Wizard
-                characters.add(new Wizard(0, generateName()));
+                characters.add(new Wizard(generateName()));
             } else {
                 // Generate Warrior
-                characters.add(new Warrior(0, generateName()));
+                characters.add(new Warrior(generateName()));
             }
         }
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     private String generateName() {
@@ -51,5 +60,15 @@ public class Party {
         var list = new LinkedList<Character>();
         for(var c: characters) if(!c.isAlive()) list.add(c);
         return list;
+    }
+
+    // Get fighter
+
+    public Character getFighter() {
+        var alive = getAliveCharacters();
+        // BONUS DONE
+        if(alive.size() <= 0) return null;
+        if(alive.size() == 1) return alive.get(0);
+        return alive.get(new Random().nextInt(0, alive.size() - 1));
     }
 }

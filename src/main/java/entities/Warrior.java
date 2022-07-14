@@ -13,8 +13,8 @@ public class Warrior extends Character {
     int stamina;
     int strength;
 
-    public Warrior(int id, String name) {
-        super(id, name, new Random().nextInt(MIN_HP_WARRIOR, MAX_HP_WARRIOR));
+    public Warrior(String name) {
+        super(name, new Random().nextInt(MIN_HP_WARRIOR, MAX_HP_WARRIOR));
         setStamina(new Random().nextInt(MIN_STAMINA, MAX_STAMINA));
         setStrength(new Random().nextInt(MIN_STRENGTH, MAX_STRENGTH));
     }

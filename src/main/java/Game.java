@@ -31,9 +31,12 @@ public class Game {
             selected = mainMenu.display();
 
             switch (selected) {
-                case GENERATE_BATTLE -> generateBattle();
-                case RUN -> this.battle.begin();
-                case DELETE_BATTLE -> this.battle = null;
+                case GENERATE_BATTLE: generateBattle(); break;
+                case RUN:
+                    this.battle.begin();
+                    this.battle = null;
+                    break;
+                case DELETE_BATTLE: this.battle = null; break;
             }
 
         } while(selected != MainMenuOption.QUIT);
