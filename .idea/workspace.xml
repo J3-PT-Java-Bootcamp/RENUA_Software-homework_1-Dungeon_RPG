@@ -4,13 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="Batalla de warrior y wizard hasta que uno de los dos muere">
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/EqualNumbersException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/MyHelper.java" afterDir="false" />
+    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="Main menu example">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_javafaker_javafaker_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_mifmif_generex_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dk_brics_automaton_automaton_1_11_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_android_1_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/battleSystem/Battle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/battleSystem/Party.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basics-of-Java-homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Basics-of-Java-homework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Attacker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Attacker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/Keyboard/ReadFromKeyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/Keyboard/ReadFromKeyboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Attacker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Character.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Wizard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Wizard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Warrior.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Wizard.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +43,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="12-create-method-executeround-and-run-a-first-battle" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,12 +70,24 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/IVAN/IdeaProjects/ProyectoIronhack1/RENUA_Software-homework_1-Dungeon_RPG",
+    "last_opened_file_path": "G:/Proyectos Java/Basics-of-Java-homework",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Characters.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Characters.Main" />
+      <module name="Basics-of-Java-homework" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Basics-of-Java-homework" />
@@ -70,6 +98,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Characters.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -83,7 +112,8 @@
       <updated>1656440934368</updated>
       <workItem from="1657037641513" duration="87000" />
       <workItem from="1657218889819" duration="335000" />
-      <workItem from="1657653293936" duration="35452000" />
+      <workItem from="1657290292733" duration="176000" />
+      <workItem from="1657816901114" duration="3921000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml">
       <created>1656444649873</created>
@@ -134,21 +164,7 @@
       <option name="project" value="LOCAL" />
       <updated>1656774909363</updated>
     </task>
-    <task id="LOCAL-00008" summary="Menu creation in process">
-      <created>1657293657371</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1657293657371</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Batalla de warrior y wizard hasta que uno de los dos muere">
-      <created>1657699824674</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1657699824674</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,9 +189,7 @@
     <MESSAGE value="Fix: now you cannot select disabled options" />
     <MESSAGE value="Edit ignore" />
     <MESSAGE value="Wizard can attack" />
-    <MESSAGE value="Menu creation in process" />
-    <MESSAGE value="Batalla de warrior y wizard hasta que uno de los dos muere" />
-    <option name="LAST_COMMIT_MESSAGE" value="Batalla de warrior y wizard hasta que uno de los dos muere" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wizard can attack" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

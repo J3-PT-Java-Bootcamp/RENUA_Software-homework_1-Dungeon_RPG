@@ -1,10 +1,12 @@
-abstract class Character implements Attacker {
+package entities;
+
+public abstract class Character implements Attacker {
     private int id;
     private String name;
     protected int hp;
-    private boolean isAlive;
+    private boolean isAlive = true;
 
-    public Character(int id, String name, int HP, boolean isAlive) {
+    public Character(int id, String name, int HP) {
         this.id = id;
         this.name = name;
         this.hp = HP;
