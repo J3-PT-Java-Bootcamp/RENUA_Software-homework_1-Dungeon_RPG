@@ -11,6 +11,14 @@ public class Battle {
     // colors are for identification
     Party blueTeam, redTeam;
 
+    public Party getBlueTeam() {
+        return blueTeam;
+    }
+
+    public Party getRedTeam() {
+        return redTeam;
+    }
+
     public Battle(int partySize) {
 
         // Generate parties

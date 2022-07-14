@@ -1,6 +1,7 @@
 package battleSystem;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Random;
 
 import com.github.javafaker.Faker;
@@ -31,6 +32,11 @@ public class Party {
                 characters.add(new Warrior(generateName()));
             }
         }
+    }
+
+    public Party(String name, Character[] characters) {
+        this.name = name;
+        this.characters = new ArrayList<>(List.of(characters));
     }
 
     public String getName() {
@@ -70,5 +76,15 @@ public class Party {
         if(alive.size() <= 0) return null;
         if(alive.size() == 1) return alive.get(0);
         return alive.get(new Random().nextInt(0, alive.size() - 1));
+    }
+
+    // CSV
+    public String toCSV() {
+        var strb = new StringBuilder();
+        strb.append("id;name;hp\n");
+        for(var c: characters) {
+            strb.append("%s;%s;%s\n".formatted(c.getId(), c.getName(), c.getHp()));
+        }
+        return strb.toString();
     }
 }
