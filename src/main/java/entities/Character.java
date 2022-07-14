@@ -7,10 +7,10 @@ public abstract class Character implements Attacker {
     protected int hp;
     private boolean isAlive = true;
 
-    public Character(String name, int HP) {
+    public Character(String name, int hp) {
         this.id = UUID.randomUUID().toString();
         this.name = name;
-        this.hp = HP;
+        this.hp = hp;
     }
 
     public String getId() {
