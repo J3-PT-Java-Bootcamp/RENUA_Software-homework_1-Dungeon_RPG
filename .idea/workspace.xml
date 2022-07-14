@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="Syntax details">
+    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="Combine changes (30 &lt;- dev)">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_javafaker_javafaker_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_android_1_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Attacker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_datafaker_datafaker_1_4_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/battleSystem/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleSystem/Battle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basics-of-Java-homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Basics-of-Java-homework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Warrior.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -53,6 +62,9 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "G:/Proyectos Java/Basics-of-Java-homework",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
@@ -166,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657821853207</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Combine changes (30 &lt;- dev)">
+      <created>1657823277020</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1657823277020</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +213,8 @@
     <MESSAGE value="Battle basics" />
     <MESSAGE value="Fixed menu" />
     <MESSAGE value="Syntax details" />
-    <option name="LAST_COMMIT_MESSAGE" value="Syntax details" />
+    <MESSAGE value="Combine changes (30 &lt;- dev)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Combine changes (30 &lt;- dev)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
