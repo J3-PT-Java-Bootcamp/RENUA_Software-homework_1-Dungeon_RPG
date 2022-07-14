@@ -40,6 +40,7 @@ public class Game {
     }
 
     private void generateBattle() {
+        // TODO: change numbers (min and max party size)
         this.battle = new Battle(ReadFromKeyboard.readNumber(5, 10));
     }
 }
