@@ -40,23 +40,10 @@ public class Wizard extends Character{
 
     @Override
     public void attack(Character target) {
-        // TODO: give the user the ability to choose
-        // When we wan to, we can remove comments and comment the code below
-        /*var options = new MenuOption[] {
-            MenuOption.create("Fireball", Attacks.Fireball, this.getMana() >= 5),
-            MenuOption.create("Staff Hit", Attacks.StaffHit)
-        };
-        var chosenAttack = new Menu<Attacks>(options, "Attack", "Choose an attack").display();
-
-        if(chosenAttack == Attacks.StaffHit) staffHit(target);
-        else fireball(target);*/
-
         if(this.getMana() >= 5) {
-            System.out.print("Metodo a ejecutar: fireball()");
             fireball(target);
         }
         else {
-            System.out.print("Metodo a ejecutar: staffHit()");
             staffHit(target);
         }
     }

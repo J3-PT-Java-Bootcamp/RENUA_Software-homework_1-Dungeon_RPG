@@ -19,12 +19,16 @@ public class Battle {
     public void begin() {
         Party winner;
         do {
+            fight(blueTeam.getFighter(), redTeam.getFighter());
             winner = getWinner();
         } while(winner == null);
+
+        System.out.println("The winner is " + winner.getName());
     }
 
     private void fight(Character character1, Character character2) {
-
+        character1.attack(character2);
+        character2.attack(character1);
     }
 
     private Party getWinner() {
