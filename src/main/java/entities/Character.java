@@ -1,35 +1,21 @@
-import net.datafaker.Faker;
-
-import java.util.UUID;
-
 abstract class Character implements Attacker {
-    private String id;
+    private int id;
     private String name;
     protected int hp;
     private boolean isAlive;
 
-    public Character(String id, String name, int hp) {
+    public Character(int id, String name, int HP, boolean isAlive) {
         this.id = id;
         this.name = name;
-        this.hp = hp;
-        this.isAlive = true;
+        this.hp = HP;
+        this.isAlive = isAlive;
     }
 
-    public Character(int hp) {
-        Faker faker = new Faker();
-        UUID uuid = UUID.randomUUID();
-
-        this.id = uuid.toString();
-        this.name = faker.name().name();
-        this.hp = hp;
-        this.isAlive = true;
-    }
-
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

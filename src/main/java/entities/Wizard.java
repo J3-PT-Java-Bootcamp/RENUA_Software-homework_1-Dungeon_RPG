@@ -1,3 +1,5 @@
+package entities;
+
 import java.util.Random;
 
 public class Wizard extends Character{
@@ -11,14 +13,8 @@ public class Wizard extends Character{
 
     private int mana;
     private int intelligence;
-    public Wizard(String id, String name) {
+    public Wizard(int id, String name) {
         super(id, name, new Random().nextInt(MIN_HP, MAX_HP));
-        setMana(new Random().nextInt(MIN_MANA, MAX_MANA));
-        setIntelligence(new Random().nextInt(MIN_INTELLIGENCE, MAX_INTELLIGENCE));
-    }
-
-    public Wizard() {
-        super(new Random().nextInt(MIN_HP, MAX_HP));
         setMana(new Random().nextInt(MIN_MANA, MAX_MANA));
         setIntelligence(new Random().nextInt(MIN_INTELLIGENCE, MAX_INTELLIGENCE));
     }
@@ -55,8 +51,14 @@ public class Wizard extends Character{
         if(chosenAttack == Attacks.StaffHit) staffHit(target);
         else fireball(target);*/
 
-        if(this.getMana() >= 5) fireball(target);
-        else staffHit(target);
+        if(this.getMana() >= 5) {
+            System.out.print("Metodo a ejecutar: fireball()");
+            fireball(target);
+        }
+        else {
+            System.out.print("Metodo a ejecutar: staffHit()");
+            staffHit(target);
+        }
     }
 
     public void fireball(Character target) {
@@ -72,10 +74,8 @@ public class Wizard extends Character{
     }
 
     public String toString() {
-        return "Wizard{" +
-                "id=" + super.getId() +
-                ", name='" + super.getName() + "'" +
-                ", mana=" + mana +
+        return "Characters.entities.Wizard{" +
+                "mana=" + mana +
                 ", intelligence=" + intelligence +
                 ", hp=" + hp +
                 '}';

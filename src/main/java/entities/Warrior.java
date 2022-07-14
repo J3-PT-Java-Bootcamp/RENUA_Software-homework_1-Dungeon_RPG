@@ -1,3 +1,5 @@
+package entities;
+
 import java.util.Random;
 
 public class Warrior extends Character {
@@ -11,14 +13,8 @@ public class Warrior extends Character {
     int stamina;
     int strength;
 
-    public Warrior(String id, String name) {
+    public Warrior(int id, String name) {
         super(id, name, new Random().nextInt(MIN_HP_WARRIOR, MAX_HP_WARRIOR));
-        setStamina(new Random().nextInt(MIN_STAMINA, MAX_STAMINA));
-        setStrength(new Random().nextInt(MIN_STRENGTH, MAX_STRENGTH));
-    }
-
-    public Warrior() {
-        super(new Random().nextInt(MIN_HP_WARRIOR, MAX_HP_WARRIOR));
         setStamina(new Random().nextInt(MIN_STAMINA, MAX_STAMINA));
         setStrength(new Random().nextInt(MIN_STRENGTH, MAX_STRENGTH));
     }
@@ -38,13 +34,10 @@ public class Warrior extends Character {
     public void setStrength(int strength) {
         this.strength = strength;
     }
-
    
     public String toString() {
-        return "Warrior{" +
-                "id=" + super.getId() +
-                ", name='" + super.getName() + "'" +
-                ", stamina=" + stamina +
+        return "Characters.entities.Warrior{" +
+                "stamina=" + stamina +
                 ", strength=" + strength +
                 ", hp=" + hp +
                 '}';
@@ -53,8 +46,10 @@ public class Warrior extends Character {
     @Override
     public void attack(Character character) {
         if (stamina >= 5) {
+            System.out.print("   Metodo a ejecutar: heavyAttack()");
             strongAttack(character);
         } else {
+            System.out.print("   Metodo a ejecutar: weakAttack()");
             weakAttack(character);
         }
     }
