@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="Comments">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_uuid_java_uuid_generator_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_29.xml" afterDir="false" />
+    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="UUIDs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basics-of-Java-homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Basics-of-Java-homework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/battleSystem/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleSystem/Party.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Wizard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/battleSystem/Battle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battleSystem/Battle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/battleSystem/Party.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battleSystem/Party.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entities/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Character.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entities/Warrior.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Warrior.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entities/Wizard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Wizard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657825715342</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="UUIDs">
+      <created>1657826400133</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1657826400133</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +223,8 @@
     <MESSAGE value="Syntax details" />
     <MESSAGE value="Theoretical function" />
     <MESSAGE value="Comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comments" />
+    <MESSAGE value="UUIDs" />
+    <option name="LAST_COMMIT_MESSAGE" value="UUIDs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
