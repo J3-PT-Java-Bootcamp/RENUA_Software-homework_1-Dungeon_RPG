@@ -26,7 +26,7 @@ public class Game {
                     MenuOption.create("Quit game", MainMenuOption.QUIT)
             };
 
-            var mainMenu = new Menu<MainMenuOption>(menuOptions, "Main menu","Choose an option");
+            var mainMenu = new Menu<>(menuOptions, "Main menu", "Choose an option");
 
             selected = mainMenu.display();
 

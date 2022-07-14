@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="Battle basics">
+    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="Fixed menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/battleSystem/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleSystem/Party.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +94,7 @@
       <workItem from="1657037641513" duration="87000" />
       <workItem from="1657218889819" duration="335000" />
       <workItem from="1657290292733" duration="176000" />
-      <workItem from="1657816901114" duration="4788000" />
+      <workItem from="1657816901114" duration="4895000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml">
       <created>1656444649873</created>
@@ -151,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657820923377</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixed menu">
+      <created>1657821750793</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1657821750793</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +185,8 @@
     <MESSAGE value="Edit ignore" />
     <MESSAGE value="Wizard can attack" />
     <MESSAGE value="Battle basics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Battle basics" />
+    <MESSAGE value="Fixed menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed menu" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

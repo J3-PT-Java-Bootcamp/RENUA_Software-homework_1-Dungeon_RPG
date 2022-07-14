@@ -8,7 +8,7 @@ import entities.Warrior;
 import entities.Wizard;
 
 public class Party {
-    private ArrayList<Character> characters;
+    private final ArrayList<Character> characters;
 
     public Party(int partySize) {
 
