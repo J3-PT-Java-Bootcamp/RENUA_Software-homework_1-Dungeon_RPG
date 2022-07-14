@@ -25,10 +25,10 @@ public class Party {
         for(int i = 0; i < partySize; i++) {
             if(new Random().nextInt(0,1) == 0) {
                 // Generate Wizard
-                characters.add(new Wizard(0, generateName()));
+                characters.add(new Wizard(generateName()));
             } else {
                 // Generate Warrior
-                characters.add(new Warrior(0, generateName()));
+                characters.add(new Warrior(generateName()));
             }
         }
     }

@@ -13,8 +13,8 @@ public class Wizard extends Character{
 
     private int mana;
     private int intelligence;
-    public Wizard(int id, String name) {
-        super(id, name, new Random().nextInt(MIN_HP, MAX_HP));
+    public Wizard(String name) {
+        super(name, new Random().nextInt(MIN_HP, MAX_HP));
         setMana(new Random().nextInt(MIN_MANA, MAX_MANA));
         setIntelligence(new Random().nextInt(MIN_INTELLIGENCE, MAX_INTELLIGENCE));
     }

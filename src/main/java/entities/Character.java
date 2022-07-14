@@ -1,23 +1,20 @@
 package entities;
+import java.util.UUID;
 
 public abstract class Character implements Attacker {
-    private int id;
+    private final String id;
     private String name;
     protected int hp;
     private boolean isAlive = true;
 
-    public Character(int id, String name, int HP) {
-        this.id = id;
+    public Character(String name, int HP) {
+        this.id = UUID.randomUUID().toString();
         this.name = name;
         this.hp = HP;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
