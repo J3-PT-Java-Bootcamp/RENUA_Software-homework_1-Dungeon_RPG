@@ -7,9 +7,6 @@
     <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="Theoretical function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/battleSystem/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleSystem/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/battleSystem/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleSystem/Party.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/battleSystem/Battle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battleSystem/Battle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/battleSystem/Party.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battleSystem/Party.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657825418785</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Theoretical function">
+      <created>1657825561976</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1657825561976</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -8,6 +8,7 @@ import entities.Character;
 * */
 public class Battle {
 
+    // colors are for identification
     Party blueTeam, redTeam;
 
     public Battle(int partySize) {
@@ -20,7 +21,12 @@ public class Battle {
     public void begin() {
         Party winner;
         do {
+            // New round
+
             fight(blueTeam.getFighter(), redTeam.getFighter());
+
+            // Ask if stats are wanted
+
             winner = getWinner();
         } while(winner == null);
 
