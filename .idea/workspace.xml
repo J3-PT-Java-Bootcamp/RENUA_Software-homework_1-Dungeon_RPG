@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="Fixed: null pointer on endgame">
+    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="Lower hp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/battleSystem/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleSystem/Battle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/battleSystem/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleSystem/Party.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Game$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Game$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainMenuOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainMenuOption.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/battleSystem/Battle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battleSystem/Battle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/battleSystem/Party.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battleSystem/Party.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Character.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="30-refactor-attack-system" />
+        <entry key="$PROJECT_DIR$" value="34-integrate-stats" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -201,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657826794627</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Lower hp">
+      <created>1657826948227</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1657826948227</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +247,8 @@
     <MESSAGE value="Comments" />
     <MESSAGE value="UUIDs" />
     <MESSAGE value="Fixed: null pointer on endgame" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed: null pointer on endgame" />
+    <MESSAGE value="Lower hp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lower hp" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
