@@ -69,6 +69,11 @@ public class Party {
         for(var c: characters) if(c.isAlive()) list.add(c);
         return list;
     }
+    public Character getAliveCharacters(int position) {
+        var list = new LinkedList<Character>();
+        for(var c: characters) if(c.isAlive()) list.add(c);
+        return list.get(position);
+    }
 
     public LinkedList<Character> getDeadCharacters() {
         var list = new LinkedList<Character>();
@@ -83,7 +88,15 @@ public class Party {
         // BONUS DONE
         if(alive.size() <= 0) return null;
         if(alive.size() == 1) return alive.get(0);
-        return alive.get(new Random().nextInt(0, alive.size() - 1));
+        return alive.get(new Random().nextInt(0, alive.size()));
+    }
+
+    public Character getFighter(int position) {
+        var alive = getAliveCharacters();
+        // BONUS DONE
+        if(alive.size() <= 0) return null;
+        if(alive.size() == 1) return alive.get(0);
+        return alive.get(position);
     }
 
     // CSV

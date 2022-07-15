@@ -17,7 +17,7 @@ enum MainMenuOption {
     EXPORT_PARTY,
     SHOW_GRAVEYARD,
     SIMULATE,
-    CHOOSE_FIGHT_BY_FIGHTER
+    CHOOSE_FIGHTER_BY_FIGHTER
 }
 
 public class Game {
@@ -94,7 +94,7 @@ public class Game {
 
         final MenuOption<MainMenuOption>[] menuOptions = new MenuOption[] {
                 MenuOption.create("Simulate battle", MainMenuOption.SIMULATE),
-                MenuOption.create("Run battle choosing fighters", MainMenuOption.CHOOSE_FIGHT_BY_FIGHTER, battle != null),
+                MenuOption.create("Run battle choosing fighters", MainMenuOption.CHOOSE_FIGHTER_BY_FIGHTER, battle != null),
         };
 
         var mainMenu = new Menu<>(menuOptions, "Main menu", "Choose an option");
@@ -102,11 +102,10 @@ public class Game {
         selected = mainMenu.display();
 
         switch (selected) {
-            case SIMULATE: this.battle.begin(); break;
-            case CHOOSE_FIGHT_BY_FIGHTER:
+            case SIMULATE: this.battle.BeginSimulation(); break;
+            case CHOOSE_FIGHTER_BY_FIGHTER: this.battle.BeginChoice(); break;
                 // TODO: IMPLEMENT THE SELECTION METHOD
-                System.out.println("This option is not available for now");
-                break;
+
         }
     }
 
