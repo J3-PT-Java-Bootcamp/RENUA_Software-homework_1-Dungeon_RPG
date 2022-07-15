@@ -11,9 +11,6 @@ public class Wizard extends Character{
     final static int MIN_INTELLIGENCE = 1;
     final static int MAX_INTELLIGENCE = 50;
 
-
-
-
     private int mana;
     private int intelligence;
     public Wizard(String name) {
@@ -21,6 +18,15 @@ public class Wizard extends Character{
         setMana(new Random().nextInt(MIN_MANA, MAX_MANA));
         setInitialHp(getHp());
         setIntelligence(new Random().nextInt(MIN_INTELLIGENCE, MAX_INTELLIGENCE));
+        setStrongAttackCounter(0);
+        setWeakAttackCounter(0);
+    }
+
+    public Wizard(String id, String name, int hp, int mana, int intelligence) {
+        super(name, hp, id);
+        setMana(mana);
+        setInitialHp(getHp());
+        setIntelligence(intelligence);
         setStrongAttackCounter(0);
         setWeakAttackCounter(0);
     }

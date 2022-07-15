@@ -34,9 +34,9 @@ public class Party {
         }
     }
 
-    public Party(String name, Character[] characters) {
+    public Party(String name, ArrayList<Character> characters) {
         this.name = name;
-        this.characters = new ArrayList<>(List.of(characters));
+        this.characters = characters;
     }
 
     public String getName() {
