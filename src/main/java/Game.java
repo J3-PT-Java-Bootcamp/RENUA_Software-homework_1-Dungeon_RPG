@@ -159,7 +159,7 @@ public class Game {
     }
 
     private void randomBattle() {
-        System.out.println("Number of fighters per party:");
+        System.out.println("Number of combatants per party:");
         this.battle = new Battle(ReadFromKeyboard.readIntKeyboard());
     }
 
