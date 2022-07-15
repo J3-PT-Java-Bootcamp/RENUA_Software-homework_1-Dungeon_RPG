@@ -171,7 +171,7 @@ public class Game {
                 MenuOption.create("Random Battle", MainMenuOption.RANDOM_BATTLE, randomBattleAveilable),
         };
 
-        var mainMenu = new Menu<>(menuOptions, "Main menu", "Choose an option");
+        var mainMenu = new Menu<>(menuOptions, "Generate battle menu", "Choose an option");
 
         return mainMenu.display();
     }
