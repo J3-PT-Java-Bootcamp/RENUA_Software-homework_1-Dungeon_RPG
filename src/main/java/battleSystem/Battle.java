@@ -28,6 +28,7 @@ public class Battle {
 
     public void begin() {
         Party winner;
+
         do {
             // New round
             Character fighterOfBlueTeam = blueTeam.getFighter();
@@ -57,18 +58,22 @@ public class Battle {
         character1.restartCounters();
         character2.restartCounters();
         int counter = 0;
+
         while (character1.isAlive() && character2.isAlive()) {
             character1.attack(character2);
             character2.attack(character1);
             counter++;
         }
+
         statsCreator(character1, character2, counter);
     }
-        private Party getWinner() {
-            if (blueTeam.getAliveCharacters().size() <= 0) return redTeam;
-            if (redTeam.getAliveCharacters().size() <= 0) return blueTeam;
-            return null;
-        }
+
+    private Party getWinner() {
+        if (blueTeam.getAliveCharacters().size() <= 0) return redTeam;
+        if (redTeam.getAliveCharacters().size() <= 0) return blueTeam;
+        return null;
+    }
+
     public static void statsCreator (Character character1, Character character2, int counter){
         int damageCharacter1 = character1.getInitialHp() - character1.getHp();
         int damageCharacter2 = character2.getInitialHp() - character2.getHp();
@@ -86,12 +91,9 @@ public class Battle {
         System.out.println("Damage inflicted : " + damageCharacter1);
         character2.showStats();
         System.out.println();
+
         if (!character1.isAlive() && !character2.isAlive()) System.out.println("Both of them are dead! What a ferocious battle!!");
         else if (!character1.isAlive()) System.out.println(character2.getName()+ " has killed " + character1.getName());
         else if (!character2.isAlive()) System.out.println(character1.getName()+ " has killed " + character2.getName());
-
     }
-
-
-
 }
