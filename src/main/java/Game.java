@@ -15,6 +15,9 @@ enum MainMenuOption {
     RUN,
     QUIT,
     EXPORT_PARTY,
+    SHOW_GRAVEYARD,
+    SIMULATE,
+    CHOOSE_FIGHT_BY_FIGHTER
 }
 
 public class Game {
@@ -31,6 +34,7 @@ public class Game {
                     MenuOption.create("Run battle", MainMenuOption.RUN, battle != null),
                     MenuOption.create("Delete battle", MainMenuOption.DELETE_BATTLE, battle != null),
                     MenuOption.create("Export party", MainMenuOption.EXPORT_PARTY, battle != null),
+                    MenuOption.create("Show graveyard", MainMenuOption.SHOW_GRAVEYARD, battle != null),
                     MenuOption.create("Quit game", MainMenuOption.QUIT)
             };
 
@@ -41,19 +45,23 @@ public class Game {
             switch (selected) {
                 case GENERATE_BATTLE: generateBattle(); break;
                 case RUN:
-                    this.battle.begin();
+                    this.runBattleOptions();
                     this.battle = null;
                     break;
                 case DELETE_BATTLE: this.battle = null; break;
                 case EXPORT_PARTY: this.exportCSV(); break;
+                case SHOW_GRAVEYARD:
+                    // TODO: Call method to show graveyard;
+                    System.out.println("This option is not available for now");
+                    break;
             }
 
         } while(selected != MainMenuOption.QUIT);
     }
 
     private void generateBattle() {
-        // TODO: change numbers (min and max party size)
-        this.battle = new Battle(ReadFromKeyboard.readNumber(5, 10));
+        System.out.println("Number of fighters per party:");
+        this.battle = new Battle(ReadFromKeyboard.readKeyboard());
     }
 
     private void exportCSV() {
@@ -79,4 +87,27 @@ public class Game {
             logError(e.getMessage());
         }
     }
+
+    private void runBattleOptions() {
+
+        MainMenuOption selected;
+
+        final MenuOption<MainMenuOption>[] menuOptions = new MenuOption[] {
+                MenuOption.create("Simulate battle", MainMenuOption.SIMULATE),
+                MenuOption.create("Run battle choosing fighters", MainMenuOption.CHOOSE_FIGHT_BY_FIGHTER, battle != null),
+        };
+
+        var mainMenu = new Menu<>(menuOptions, "Main menu", "Choose an option");
+
+        selected = mainMenu.display();
+
+        switch (selected) {
+            case SIMULATE: this.battle.begin(); break;
+            case CHOOSE_FIGHT_BY_FIGHTER:
+                // TODO: IMPLEMENT THE SELECTION METHOD
+                System.out.println("This option is not available for now");
+                break;
+        }
+    }
+
 }
