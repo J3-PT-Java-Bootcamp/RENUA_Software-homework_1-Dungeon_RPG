@@ -72,12 +72,12 @@ public class Warrior extends Character {
     }
 
     private void strongAttack(Character character) {
-        character.setHp(character.getHp() - this.strength);
+        character.doDamage(this.strength / 2);
         setStamina(getStamina() - 5);
     }
 
     private void weakAttack(Character character) {
-        character.setHp(character.getHp() - (int) Math.floor(this.strength / 2.0));
+        character.doDamage(this.strength / 2);
         setStamina(getStamina() + 1);
     }
 

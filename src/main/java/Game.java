@@ -19,6 +19,9 @@ enum MainMenuOption {
     RUN,
     QUIT,
     EXPORT_PARTY,
+    SHOW_GRAVEYARD,
+    SIMULATE,
+    CHOOSE_FIGHTER_BY_FIGHTER,
     IMPORT_PARTY,
     RANDOM_PARTY,
     RANDOM_BATTLE
@@ -38,6 +41,7 @@ public class Game {
                 MenuOption.create("Run battle", MainMenuOption.RUN, battle != null),
                 MenuOption.create("Delete battle", MainMenuOption.DELETE_BATTLE, battle != null),
                 MenuOption.create("Export party", MainMenuOption.EXPORT_PARTY, battle != null),
+                MenuOption.create("Show graveyard", MainMenuOption.SHOW_GRAVEYARD, battle != null),
                 MenuOption.create("Quit game", MainMenuOption.QUIT)
             };
 
@@ -48,11 +52,15 @@ public class Game {
             switch (selected) {
                 case GENERATE_BATTLE: generateBattle(); break;
                 case RUN:
-                    this.battle.begin();
+                    this.runBattleOptions();
                     this.battle = null;
                     break;
                 case DELETE_BATTLE: this.battle = null; break;
                 case EXPORT_PARTY: this.exportCSV(); break;
+                case SHOW_GRAVEYARD:
+                    // TODO: Call method to show graveyard;
+                    System.out.println("This option is not available for now");
+                    break;
             }
 
         } while(selected != MainMenuOption.QUIT);
@@ -118,6 +126,25 @@ public class Game {
         }
     }
 
+    private void runBattleOptions() {
+
+        MainMenuOption selected;
+
+        final MenuOption<MainMenuOption>[] menuOptions = new MenuOption[] {
+                MenuOption.create("Simulate battle", MainMenuOption.SIMULATE),
+                MenuOption.create("Run battle choosing fighters", MainMenuOption.CHOOSE_FIGHTER_BY_FIGHTER, battle != null),
+        };
+
+        var mainMenu = new Menu<>(menuOptions, "Main menu", "Choose an option");
+
+        selected = mainMenu.display();
+
+        switch (selected) {
+            case SIMULATE: this.battle.BeginSimulation(); break;
+            case CHOOSE_FIGHTER_BY_FIGHTER: this.battle.BeginChoice(); break;
+        }
+    }
+
     private Party importCSV(String position) {
 
         System.out.println("File name (Without CSV extension) for " + position + " party:");
@@ -166,9 +193,9 @@ public class Game {
     private MainMenuOption getMainMenuOption(Boolean randomBattleAveilable) {
 
         final MenuOption<MainMenuOption>[] menuOptions = new MenuOption[] {
-                MenuOption.create("Import party", MainMenuOption.IMPORT_PARTY),
-                MenuOption.create("Random party", MainMenuOption.RANDOM_PARTY),
-                MenuOption.create("Random Battle", MainMenuOption.RANDOM_BATTLE, randomBattleAveilable),
+            MenuOption.create("Import party", MainMenuOption.IMPORT_PARTY),
+            MenuOption.create("Random party", MainMenuOption.RANDOM_PARTY),
+            MenuOption.create("Random Battle", MainMenuOption.RANDOM_BATTLE, randomBattleAveilable),
         };
 
         var mainMenu = new Menu<>(menuOptions, "Generate battle menu", "Choose an option");
