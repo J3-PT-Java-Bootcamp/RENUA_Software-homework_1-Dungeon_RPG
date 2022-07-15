@@ -34,9 +34,9 @@ public class Party {
         }
     }
 
-    public Party(String name, Character[] characters) {
+    public Party(String name, ArrayList<Character> characters) {
         this.name = name;
-        this.characters = new ArrayList<>(List.of(characters));
+        this.characters = characters;
     }
 
     public String getName() {
@@ -102,9 +102,16 @@ public class Party {
     // CSV
     public String toCSV() {
         var strb = new StringBuilder();
-        strb.append("id;name;hp\n");
+        strb.append("type;id;name;hp;resource;strong\n");
         for(var c: characters) {
-            strb.append("%s;%s;%s\n".formatted(c.getId(), c.getName(), c.getHp()));
+
+            if (c instanceof Wizard) {
+                var wizard = (Wizard) c;
+                strb.append("%s;%s;%s;%s;%s;%s\n".formatted("Wizard", c.getId(), c.getName(), c.getHp(), wizard.getMana(), wizard.getIntelligence()));
+            } else {
+                var warrior = (Warrior) c;
+                strb.append("%s;%s;%s;%s;%s;%S\n".formatted("Warrior", c.getId(), c.getName(), c.getHp(), warrior.getStamina(), warrior.getStrength()));
+            }
         }
         return strb.toString();
     }

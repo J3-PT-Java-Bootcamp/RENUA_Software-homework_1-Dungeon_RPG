@@ -2,7 +2,6 @@ package battleSystem;
 
 import com.github.javafaker.Faker;
 import entities.Character;
-import utilities.Keyboard.ReadFromKeyboard;
 import utilities.menu.Menu;
 import utilities.menu.MenuOption;
 
@@ -29,6 +28,12 @@ public class Battle {
         redTeam = new Party(partySize, new Faker().harryPotter().location());
     }
 
+    public Battle(Party bt, Party rt) {
+
+        // Parties
+        blueTeam = bt;
+        redTeam = rt;
+    }
 
     public void BeginSimulation(){
 
@@ -41,8 +46,8 @@ public class Battle {
 
 
             } while (getWinner() == null);
-        System.out.println();
-        System.out.println(getWinner());
+
+        System.out.println("\n" + getWinner());
     }
     public void BeginChoice(){
 
@@ -53,8 +58,8 @@ public class Battle {
             runRound(fighterOfBlueTeam, fighterOfRedTeam);
 
         } while (getWinner() == null);
-        System.out.println();
-        System.out.println(getWinner());
+
+        System.out.println("\n" + getWinner());
     }
 
     private  int  BlueFighterChoice(){
