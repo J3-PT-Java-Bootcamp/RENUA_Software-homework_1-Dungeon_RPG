@@ -26,6 +26,13 @@ public class Battle {
         redTeam = new Party(partySize, new Faker().harryPotter().location());
     }
 
+    public Battle(Party bt, Party rt) {
+
+        // Generate parties
+        blueTeam = bt;
+        redTeam = rt;
+    }
+
     public void begin() {
         Party winner;
 
