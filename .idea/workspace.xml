@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="Lower hp">
+    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/battleSystem/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleSystem/Battle.java" afterDir="false" />
@@ -25,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -59,7 +60,11 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;G:/Proyectos Java/Basics-of-Java-homework&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
@@ -173,12 +178,12 @@
       <option name="project" value="LOCAL" />
       <updated>1657821853207</updated>
     </task>
-    <task id="LOCAL-00011" summary="Theoretical function">
-      <created>1657825418785</created>
+    <task id="LOCAL-00011" summary="Combine changes (30 &lt;- dev)">
+      <created>1657823277020</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1657825418785</updated>
+      <updated>1657823277020</updated>
     </task>
     <task id="LOCAL-00012" summary="Theoretical function">
       <created>1657825561976</created>
@@ -243,6 +248,7 @@
     <MESSAGE value="Battle basics" />
     <MESSAGE value="Fixed menu" />
     <MESSAGE value="Syntax details" />
+    <MESSAGE value="Combine changes (30 &lt;- dev)" />
     <MESSAGE value="Theoretical function" />
     <MESSAGE value="Comments" />
     <MESSAGE value="UUIDs" />

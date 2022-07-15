@@ -13,10 +13,14 @@ public class Warrior extends Character {
     int stamina;
     int strength;
 
+
     public Warrior(String name) {
         super(name, new Random().nextInt(MIN_HP_WARRIOR, MAX_HP_WARRIOR));
         setStamina(new Random().nextInt(MIN_STAMINA, MAX_STAMINA));
         setStrength(new Random().nextInt(MIN_STRENGTH, MAX_STRENGTH));
+        setInitialHp(this.getHp());
+        setStrongAttackCounter(0);
+        setWeakAttackCounter(0);
     }
 
     public int getStamina() {
@@ -34,23 +38,27 @@ public class Warrior extends Character {
     public void setStrength(int strength) {
         this.strength = strength;
     }
-   
+
+
     public String toString() {
-        return "Characters.entities.Warrior{" +
+        return getName() + " (warrior)" + " {" +
                 "stamina=" + stamina +
                 ", strength=" + strength +
                 ", hp=" + hp +
                 '}';
     }
 
+
     @Override
     public void attack(Character character) {
         if (stamina >= 5) {
-            System.out.print("   Metodo a ejecutar: heavyAttack()");
+            //System.out.print("   Metodo a ejecutar: heavyAttack()");
             strongAttack(character);
+            setStrongAttackCounter(getStrongAttackCounter() + 1);
         } else {
-            System.out.print("   Metodo a ejecutar: weakAttack()");
+            //System.out.print("   Metodo a ejecutar: weakAttack()");
             weakAttack(character);
+            setWeakAttackCounter(getWeakAttackCounter() + 1);
         }
     }
 
@@ -60,7 +68,14 @@ public class Warrior extends Character {
     }
 
     private void weakAttack(Character character) {
-        character.setHp(character.getHp() - (int)Math.floor(this.strength / 2.0));
+        character.setHp(character.getHp() - (int) Math.floor(this.strength / 2.0));
         setStamina(getStamina() + 1);
+    }
+
+    @Override
+    public void showStats() {
+        System.out.println("Stamina left: " + this.getStamina());
+        System.out.println("Heavy Attacks performed: " + this.getStrongAttackCounter());
+        System.out.println("Weak Attacks performed: " + this.getWeakAttackCounter());
     }
 }
