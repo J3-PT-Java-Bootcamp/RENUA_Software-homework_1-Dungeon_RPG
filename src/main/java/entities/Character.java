@@ -7,16 +7,15 @@ public abstract class Character implements Attacker {
     protected int hp;
     protected int initialHp;
     private boolean isAlive = true;
-
-    int strongAttackCounter;
-    int weakAttackCounter;
+    private int strongAttackCounter;
+    private int weakAttackCounter;
 
 
 
     public Character(String name, int hp) {
         this.id = UUID.randomUUID().toString();
         setName(name);
-        this.hp = hp;
+        setHp(hp);
         setInitialHp(getHp());
         setStrongAttackCounter(0);
         setWeakAttackCounter(0);
