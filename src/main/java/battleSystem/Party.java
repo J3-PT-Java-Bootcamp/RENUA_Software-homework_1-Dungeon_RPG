@@ -23,12 +23,12 @@ public class Party {
         this.characters = new ArrayList<Character>();
 
         for(int i = 0; i < partySize; i++) {
-            if(new Random().nextInt(0,1) == 0) {
+            if(new Random().nextInt(0,2) == 1) {
                 // Generate Wizard
-                characters.add(new Wizard(generateName()));
+                characters.add(new Wizard(generateNameForWizards()));
             } else {
                 // Generate Warrior
-                characters.add(new Warrior(generateName()));
+                characters.add(new Warrior(generateNameForWarriors()));
             }
         }
     }
@@ -37,8 +37,16 @@ public class Party {
         return this.name;
     }
 
-    private String generateName() {
-        String name = new Faker().name().name();
+    private String generateNameForWarriors() {
+        Faker nameGenerator = new Faker();
+        String name = nameGenerator.lordOfTheRings().character();
+        while(!isNameAvailable(name)) name += " Jr";
+        return name;
+    }
+
+    private String generateNameForWizards() {
+        Faker nameGenerator = new Faker();
+        String name = nameGenerator.harryPotter().character();
         while(!isNameAvailable(name)) name += " Jr";
         return name;
     }

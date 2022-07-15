@@ -11,12 +11,18 @@ public class Wizard extends Character{
     final static int MIN_INTELLIGENCE = 1;
     final static int MAX_INTELLIGENCE = 50;
 
+
+
+
     private int mana;
     private int intelligence;
     public Wizard(String name) {
         super(name, new Random().nextInt(MIN_HP, MAX_HP));
         setMana(new Random().nextInt(MIN_MANA, MAX_MANA));
+        setInitialHp(getHp());
         setIntelligence(new Random().nextInt(MIN_INTELLIGENCE, MAX_INTELLIGENCE));
+        setStrongAttackCounter(0);
+        setWeakAttackCounter(0);
     }
 
     public int getMana() {
@@ -38,13 +44,17 @@ public class Wizard extends Character{
         this.intelligence = intelligence;
     }
 
+
+
     @Override
     public void attack(Character target) {
         if(this.getMana() >= 5) {
             fireball(target);
+            setStrongAttackCounter(getStrongAttackCounter()+1);
         }
         else {
             staffHit(target);
+            setWeakAttackCounter(getWeakAttackCounter()+1);
         }
     }
 
@@ -61,10 +71,17 @@ public class Wizard extends Character{
     }
 
     public String toString() {
-        return "Characters.entities.Wizard{" +
+        return getName() + " (wizard)" + " {" +
                 "mana=" + mana +
                 ", intelligence=" + intelligence +
                 ", hp=" + hp +
                 '}';
+    }
+
+    @Override
+    public void showStats() {
+        System.out.println("Mana left: " + this.getMana());
+        System.out.println("Fireballs casted: " + this.getStrongAttackCounter());
+        System.out.println("Staff Hits performed: " + this.getWeakAttackCounter());
     }
 }
