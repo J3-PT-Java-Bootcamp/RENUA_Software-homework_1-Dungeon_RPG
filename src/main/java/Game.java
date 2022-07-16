@@ -1,35 +1,26 @@
 import battleSystem.Battle;
 import battleSystem.Party;
+
 import com.github.javafaker.Faker;
 import entities.Character;
 import entities.Warrior;
 import entities.Wizard;
+
 import utilities.Keyboard.ReadFromKeyboard;
+import utilities.menu.MainMenuOption;
 import utilities.menu.Menu;
 import utilities.menu.MenuOption;
 
 import java.io.*;
+import java.util.LinkedList;
 import java.util.ArrayList;
 
 import static utilities.errors.Errors.logError;
 
-enum MainMenuOption {
-    GENERATE_BATTLE,
-    DELETE_BATTLE,
-    RUN,
-    QUIT,
-    EXPORT_PARTY,
-    SHOW_GRAVEYARD,
-    SIMULATE,
-    CHOOSE_FIGHTER_BY_FIGHTER,
-    IMPORT_PARTY,
-    RANDOM_PARTY,
-    RANDOM_BATTLE
-}
-
 public class Game {
 
     private Battle battle = null;
+    private Battle lastBattle = null;
 
     public Game() {
 
@@ -40,8 +31,8 @@ public class Game {
                 MenuOption.create("Generate battle", MainMenuOption.GENERATE_BATTLE),
                 MenuOption.create("Run battle", MainMenuOption.RUN, battle != null),
                 MenuOption.create("Delete battle", MainMenuOption.DELETE_BATTLE, battle != null),
-                MenuOption.create("Export party", MainMenuOption.EXPORT_PARTY, battle != null),
-                MenuOption.create("Show graveyard", MainMenuOption.SHOW_GRAVEYARD, battle != null),
+                MenuOption.create("Export party", MainMenuOption.EXPORT_PARTY, battle != null || lastBattle != null),
+                MenuOption.create("Show graveyard", MainMenuOption.SHOW_GRAVEYARD, lastBattle != null),
                 MenuOption.create("Quit game", MainMenuOption.QUIT)
             };
 
@@ -53,14 +44,12 @@ public class Game {
                 case GENERATE_BATTLE: generateBattle(); break;
                 case RUN:
                     this.runBattleOptions();
+                    this.lastBattle = this.battle;
                     this.battle = null;
                     break;
                 case DELETE_BATTLE: this.battle = null; break;
                 case EXPORT_PARTY: this.exportCSV(); break;
-                case SHOW_GRAVEYARD:
-                    // TODO: Call method to show graveyard;
-                    System.out.println("This option is not available for now");
-                    break;
+                case SHOW_GRAVEYARD: showGraveyard(); break;
             }
 
         } while(selected != MainMenuOption.QUIT);
@@ -103,9 +92,11 @@ public class Game {
     }
 
     private void exportCSV() {
+        var battle = this.battle != null ? this.battle : this.lastBattle;
+
         final MenuOption[] menuOptions = new MenuOption[] {
-            MenuOption.create(this.battle.getBlueTeam().getName(), this.battle.getBlueTeam()),
-            MenuOption.create(this.battle.getRedTeam().getName(), this.battle.getRedTeam())
+            MenuOption.create(battle.getBlueTeam().getName(), battle.getBlueTeam()),
+            MenuOption.create(battle.getRedTeam().getName(), battle.getRedTeam())
         };
 
         var menu = new Menu<Party>(menuOptions, "Export party", "Choose a party");
@@ -126,16 +117,34 @@ public class Game {
         }
     }
 
-    private void runBattleOptions() {
+    private void showGraveyard() {
 
         MainMenuOption selected;
 
         final MenuOption<MainMenuOption>[] menuOptions = new MenuOption[] {
-                MenuOption.create("Simulate battle", MainMenuOption.SIMULATE),
-                MenuOption.create("Run battle choosing fighters", MainMenuOption.CHOOSE_FIGHTER_BY_FIGHTER, battle != null),
+            MenuOption.create("Show graveyard of team: " + this.lastBattle.getBlueTeam().getName(), MainMenuOption.BLUE_TEAM),
+            MenuOption.create("Show graveyard of team: " + this.lastBattle.getRedTeam().getName(), MainMenuOption.RED_TEAM),
         };
 
-        var mainMenu = new Menu<>(menuOptions, "Main menu", "Choose an option");
+        var mainMenu = new Menu<>(menuOptions, "Graveyard menu", "Choose an option");
+
+        selected = mainMenu.display();
+
+        switch (selected) {
+            case BLUE_TEAM: printGraveyard(lastBattle.getBlueTeam().getDeadCharacters()); break;
+            case RED_TEAM: printGraveyard(lastBattle.getRedTeam().getDeadCharacters()); break;
+        }
+    }
+
+    private void runBattleOptions() {
+        MainMenuOption selected;
+
+        final MenuOption<MainMenuOption>[] menuOptions = new MenuOption[] {
+            MenuOption.create("Simulate battle", MainMenuOption.SIMULATE),
+            MenuOption.create("Run battle choosing fighters", MainMenuOption.CHOOSE_FIGHTER_BY_FIGHTER, battle != null),
+        };
+
+        var mainMenu = new Menu<>(menuOptions, "Battle menu", "Choose an option");
 
         selected = mainMenu.display();
 
@@ -143,6 +152,14 @@ public class Game {
             case SIMULATE: this.battle.BeginSimulation(); break;
             case CHOOSE_FIGHTER_BY_FIGHTER: this.battle.BeginChoice(); break;
         }
+    }
+
+    private void printGraveyard(LinkedList<Character> deadCharacters) {
+        final StringBuffer sb = new StringBuffer();
+        for (Character deadCharacter : deadCharacters) {
+            sb.append(deadCharacter + "\n");
+        }
+        System.out.println(sb.length() == 0 ? "No dead characters" : sb);
     }
 
     private Party importCSV(String position) {
