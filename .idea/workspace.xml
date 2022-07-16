@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="" />
+    <list default="true" id="d48b89a5-786e-4034-a1b6-61b9a018011d" name="Changes" comment="Stats created + some random changes">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_7_2022_18_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_7_2022_18_23__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_7_2022_21_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_7_2022_21_42__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2022_21_07__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2022_21_07__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2022_21_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2022_21_43__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_7_2022_18_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_7_2022_18_23__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_7_2022_16_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_7_2022_16_23__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/battleSystem/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleSystem/Battle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/battleSystem/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleSystem/Party.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Game$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Game$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainMenuOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainMenuOption.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/battleSystem/Battle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battleSystem/Battle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/battleSystem/Party.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battleSystem/Party.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Character.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Warrior.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Warrior.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="2BDW2xJYMOSTrVIpbCRJeLUj9J4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -18,11 +64,49 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Git.Branch.Popup.ShowAllRemotes": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "G:/Proyectos Java/Basics-of-Java-homework",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Characters.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Characters.Main" />
+      <module name="Basics-of-Java-homework" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Basics-of-Java-homework" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Characters.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -31,7 +115,161 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656440934368</updated>
+      <workItem from="1657037641513" duration="87000" />
+      <workItem from="1657218889819" duration="335000" />
+      <workItem from="1657290292733" duration="176000" />
+      <workItem from="1657816901114" duration="5688000" />
     </task>
+    <task id="LOCAL-00001" summary="workspace.xml">
+      <created>1656444649873</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1656444649873</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Menu object">
+      <created>1656445864957</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1656445864957</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Display options">
+      <created>1656446373465</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1656446373465</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Consider disabled options">
+      <created>1656447117329</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1656447117329</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix: now you cannot select disabled options">
+      <created>1656447397199</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1656447397199</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Edit ignore">
+      <created>1656772353892</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1656772353892</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Wizard can attack">
+      <created>1656774909363</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1656774909363</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Battle basics">
+      <created>1657820923377</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657820923377</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixed menu">
+      <created>1657821750793</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1657821750793</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Syntax details">
+      <created>1657821853207</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1657821853207</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Combine changes (30 &lt;- dev)">
+      <created>1657823277020</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1657823277020</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Theoretical function">
+      <created>1657825561976</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1657825561976</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Comments">
+      <created>1657825715342</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1657825715342</updated>
+    </task>
+    <task id="LOCAL-00014" summary="UUIDs">
+      <created>1657826400133</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1657826400133</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fixed: null pointer on endgame">
+      <created>1657826794627</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1657826794627</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Lower hp">
+      <created>1657826948227</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1657826948227</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="workspace.xml" />
+    <MESSAGE value="Menu object" />
+    <MESSAGE value="Display options" />
+    <MESSAGE value="Consider disabled options" />
+    <MESSAGE value="Fix: now you cannot select disabled options" />
+    <MESSAGE value="Edit ignore" />
+    <MESSAGE value="Wizard can attack" />
+    <MESSAGE value="Battle basics" />
+    <MESSAGE value="Fixed menu" />
+    <MESSAGE value="Syntax details" />
+    <MESSAGE value="Combine changes (30 &lt;- dev)" />
+    <MESSAGE value="Theoretical function" />
+    <MESSAGE value="Comments" />
+    <MESSAGE value="UUIDs" />
+    <MESSAGE value="Fixed: null pointer on endgame" />
+    <MESSAGE value="Lower hp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lower hp" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
