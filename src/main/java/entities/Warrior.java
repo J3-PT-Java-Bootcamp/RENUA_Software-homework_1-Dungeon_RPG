@@ -23,6 +23,15 @@ public class Warrior extends Character {
         setWeakAttackCounter(0);
     }
 
+    public Warrior(String id, String name, int hp, int stamina, int strength) {
+        super(name, hp, id);
+        setStamina(stamina);
+        setStrength(strength);
+        setInitialHp(this.getHp());
+        setStrongAttackCounter(0);
+        setWeakAttackCounter(0);
+    }
+
     public int getStamina() {
         return stamina;
     }
@@ -63,12 +72,12 @@ public class Warrior extends Character {
     }
 
     private void strongAttack(Character character) {
-        character.setHp(character.getHp() - this.strength);
+        character.doDamage(this.strength / 2);
         setStamina(getStamina() - 5);
     }
 
     private void weakAttack(Character character) {
-        character.setHp(character.getHp() - (int) Math.floor(this.strength / 2.0));
+        character.doDamage(this.strength / 2);
         setStamina(getStamina() + 1);
     }
 

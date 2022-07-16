@@ -10,10 +10,17 @@ public abstract class Character implements Attacker {
     private int strongAttackCounter;
     private int weakAttackCounter;
 
-
-
     public Character(String name, int hp) {
         this.id = UUID.randomUUID().toString();
+        setName(name);
+        setHp(hp);
+        setInitialHp(getHp());
+        setStrongAttackCounter(0);
+        setWeakAttackCounter(0);
+    }
+
+    public Character(String name, int hp, String id) {
+        this.id = id;
         setName(name);
         setHp(hp);
         setInitialHp(getHp());
@@ -75,9 +82,9 @@ public abstract class Character implements Attacker {
 
     public void doDamage(int damage) {
         // Must check if it is dead
+        if(this.getHp() < damage)this.setHp(0);
+        else this.setHp(this.getHp() - damage);
 
-        this.setHp(this.getHp() - damage);
-        if (this.getHp() < 0) this.setHp(0);
     }
 
     public String toString() {
