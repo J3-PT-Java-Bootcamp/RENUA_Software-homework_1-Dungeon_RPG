@@ -31,7 +31,7 @@ public class Game {
                 MenuOption.create("Generate battle", MainMenuOption.GENERATE_BATTLE),
                 MenuOption.create("Run battle", MainMenuOption.RUN, battle != null),
                 MenuOption.create("Delete battle", MainMenuOption.DELETE_BATTLE, battle != null),
-                MenuOption.create("Export party", MainMenuOption.EXPORT_PARTY, battle != null),
+                MenuOption.create("Export party", MainMenuOption.EXPORT_PARTY, battle != null || lastBattle != null),
                 MenuOption.create("Show graveyard", MainMenuOption.SHOW_GRAVEYARD, lastBattle != null),
                 MenuOption.create("Quit game", MainMenuOption.QUIT)
             };
@@ -92,9 +92,11 @@ public class Game {
     }
 
     private void exportCSV() {
+        var battle = this.battle != null ? this.battle : this.lastBattle;
+
         final MenuOption[] menuOptions = new MenuOption[] {
-            MenuOption.create(this.battle.getBlueTeam().getName(), this.battle.getBlueTeam()),
-            MenuOption.create(this.battle.getRedTeam().getName(), this.battle.getRedTeam())
+            MenuOption.create(battle.getBlueTeam().getName(), battle.getBlueTeam()),
+            MenuOption.create(battle.getRedTeam().getName(), battle.getRedTeam())
         };
 
         var menu = new Menu<Party>(menuOptions, "Export party", "Choose a party");
@@ -157,7 +159,7 @@ public class Game {
         for (Character deadCharacter : deadCharacters) {
             sb.append(deadCharacter + "\n");
         }
-        System.out.println(sb);
+        System.out.println(sb.length() == 0 ? "No dead characters" : sb);
     }
 
     private Party importCSV(String position) {
