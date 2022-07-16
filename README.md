@@ -3,11 +3,11 @@
 
 Welcome to our project we are RENUA a team consisting of five members:
 
-Joel
-Sergi Jacas Puig
-Sara
-Ivan
-Pau
+- Joel
+- Sergi
+- Sara
+- Ivan
+- Pau
 
 We are really glad that you are testing our game, we hope that you enjoy it.
 
