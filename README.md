@@ -1,6 +1,4 @@
 # Basics-of-Java-homework
-README FILE
-
 
 
 Welcome to our project we are RENUA a team consisting of five members:
@@ -15,7 +13,7 @@ We are really glad that you are testing our game, we hope that you enjoy it.
 
 
 
-FIRST BATTLE
+## FIRST BATTLE
 
 (You will see that most of the options are [DISABLED] that is because until there has been a battle you will not be able to use them)
 
@@ -40,8 +38,7 @@ Then you will have two options:
 
 
 
-
-STATS OF THE FIGHTS
+## STATS OF THE FIGHTS
 
 Each fight is presented with the stats of each fighter.
 Here you will be able to see in a glance the outcome of the fight.
@@ -64,7 +61,7 @@ There is a special case where both fighters can kill each other at the same type
 In between the fights you will have the remaining  participants of each team.
 
 
-ENDING
+## ENDING
 
 Once a team has ran out of members, the battle will reach its conclusion.
 
@@ -81,7 +78,7 @@ Once the fight is over, you can start a new battle.
 
 
 
-ADDITIONAL OPTIONS
+## ADDITIONAL OPTIONS
 
 
 Export Party- if you want to export the team that has been generated to use it in other battles or even to modify the stats of the members, you can choose this option. 
